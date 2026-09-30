@@ -30,3 +30,16 @@ html {
   scrollbar-width: none;
 }
 
+/* Suppress Netlify floating drawer and AI badges */
+iframe[src*="netlify"],
+[data-netlify-badge],
+div[class*="netlify-drawer"],
+#netlify-drawer-root,
+.netlify-feedback-drawer,
+div:has(> button[aria-label*="Netlify"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
