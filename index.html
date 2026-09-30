@@ -12,6 +12,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Forcefully remove Netlify toolbar and feedback drawer elements
+      const removeNetlifyBadge = () => {
+        const selectors = [
+          'netlify-feedback-drawer',
+          '#netlify-drawer-root',
+          '[data-netlify-badge]',
+          'iframe[src*="netlify"]',
+          'div[class*="netlify-drawer"]'
+        ];
+        
+        selectors.forEach(selector => {
+          document.querySelectorAll(selector).forEach(el => el.remove());
+        });
+
+        // Handle Shadow DOM injections if present
+        document.querySelectorAll('*').forEach(el => {
+          if (el.shadowRoot) {
+            selectors.forEach(selector => {
+              el.shadowRoot.querySelectorAll(selector).forEach(node => node.remove());
+            });
+          }
+        });
+      };
+
+      // Run on DOM content loaded and periodically for the first 5 seconds
+      window.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+      const interval = setInterval(removeNetlifyBadge, 300);
+      setTimeout(() => clearInterval(interval), 5000);
+    </script>
   </head>
   <body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-purple-900 selection:text-white">
     <div id="root"></div>

@@ -43,3 +43,13 @@ div:has(> button[aria-label*="Netlify"]) {
   pointer-events: none !important;
 }
 
+netlify-feedback-drawer,
+#netlify-drawer-root,
+[data-netlify-badge],
+iframe[src*="netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
