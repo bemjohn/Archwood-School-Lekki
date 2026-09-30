@@ -1,4 +1,5 @@
 import { ReviewItem, StoryItem, ProgramItem } from '../types';
+import { images } from '@/assets/images';
 
 export const INITIAL_REVIEWS: ReviewItem[] = [
   {
@@ -123,7 +124,7 @@ export const STORIES: StoryItem[] = [
       'The halls of Archwood School at Plot 17 Road 1 Ikota Villa resonated with infectious energy as pupils, teachers, and parents gathered for the opening assembly. With upgraded multimedia classrooms, renewed STEAM robotics stations, and expanded library resources, the 2026/2027 academic session promises unprecedented milestones in holistic learning and personal development.',
     date: 'September 2026',
     readTime: '3 min read',
-    image: '/src/assets/images/archwood_hero_stem_1790709923945.jpg',
+    image: images.heroStem,
   },
   {
     id: 'story-2',
@@ -136,7 +137,7 @@ export const STORIES: StoryItem[] = [
       'At Archwood Early Years, we believe every child is naturally curious. Using certified Montessori sensorial apparatus combined with Jolly Phonics and interactive storytelling, our pupils build unshakeable reading foundations before entering Primary school. Every corner of the classroom is tailored to foster independence and joy.',
     date: 'September 2026',
     readTime: '4 min read',
-    image: '/src/assets/images/archwood_classroom_tour_1790709947333.jpg',
+    image: images.classroomTour,
   },
   {
     id: 'story-3',
@@ -149,7 +150,7 @@ export const STORIES: StoryItem[] = [
       'Physical fitness and teamwork go hand-in-hand with academic scholarship. Archwood School Lekki prides itself on weekly swimming sessions, certified martial arts coaching, and dynamic track events. Our pupils learn resilience, fair play, and self-confidence through active competition.',
     date: 'August 2026',
     readTime: '3 min read',
-    image: '/src/assets/images/archwood_hero_sports_1790709936569.jpg',
+    image: images.heroSports,
   },
   {
     id: 'story-4',
@@ -162,7 +163,7 @@ export const STORIES: StoryItem[] = [
       'Our dual-curriculum framework combines the analytical depth of the Nigerian national primary curriculum with the investigative inquiry of the British Early Years Foundation Stage (EYFS) and Cambridge Primary frameworks. Pupils master coding, mental arithmetic, creative writing, and public speaking.',
     date: 'August 2026',
     readTime: '5 min read',
-    image: '/src/assets/images/archwood_pupils_glance_1790709958618.jpg',
+    image: images.pupilsGlance,
   },
 ];
 
