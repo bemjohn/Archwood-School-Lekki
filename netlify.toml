@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  DISABLE_NETLIFY_TOOLBAR = "true"
+  NETLIFY_DRAWER = "false"
