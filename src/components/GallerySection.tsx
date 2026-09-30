@@ -10,6 +10,7 @@ import {
   Share2,
 } from 'lucide-react';
 import { ArchwoodOfficialEmblem } from './CrestLogo';
+import { images } from '@/assets/images';
 
 export interface GalleryImage {
   id: string;
@@ -27,7 +28,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'STEAM Robotics & Hands-On Science Discovery',
     category: 'classrooms',
     categoryLabel: 'Classrooms & Labs',
-    image: '/src/assets/images/archwood_hero_stem_1790709923945.jpg',
+    image: images.heroStem,
     description:
       'Pupils exploring circuit boards, robotics components, and collaborative STEM building in our modern air-conditioned science laboratory.',
     date: 'Academic Session 2026/2027',
@@ -37,7 +38,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Taekwondo Martial Arts & Physical Discipline',
     category: 'sports',
     categoryLabel: 'Sports & Athletics',
-    image: '/src/assets/images/archwood_taekwondo_club_1790714079088.jpg',
+    image: images.taekwondoClub,
     description:
       'Pupils practicing form, agility, focus, and self-defense with certified martial arts coaches on tatami mats.',
     date: 'Weekly Co-Curricular Club',
@@ -47,7 +48,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Creative Arts & Watercolour Painting Studio',
     category: 'arts',
     categoryLabel: 'Arts & Music',
-    image: '/src/assets/images/archwood_art_studio_1790714067363.jpg',
+    image: images.artStudio,
     description:
       'Cultivating expressive voice, colour theory, and fine motor precision through canvas painting, clay sculpting, and visual arts.',
     date: 'Art & Expressive Culture',
@@ -57,7 +58,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Montessori Early Years & Sensory Play',
     category: 'earlyyears',
     categoryLabel: 'Early Years & Crèche',
-    image: '/src/assets/images/archwood_montessori_nursery_1790714089804.jpg',
+    image: images.montessoriNursery,
     description:
       'Nursery learners developing phonics, tactile awareness, and social camaraderie using didactic wooden Montessori materials.',
     date: 'British EYFS Framework',
@@ -67,7 +68,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Annual Graduation & Academic Honours Ceremony',
     category: 'events',
     categoryLabel: 'Events & Graduation',
-    image: '/src/assets/images/archwood_graduation_speech_1790714099073.jpg',
+    image: images.graduationSpeech,
     description:
       'Celebrating outstanding scholarship, leadership awards, and transition into secondary education with proud parents and teachers.',
     date: 'Annual Speech & Prize Giving',
@@ -77,7 +78,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Outdoor Athletics, Football & Lawn Games',
     category: 'sports',
     categoryLabel: 'Sports & Athletics',
-    image: '/src/assets/images/archwood_hero_sports_1790709936569.jpg',
+    image: images.heroSports,
     description:
       'Physical agility, team camaraderie, and active playground fun under sunny Lagos skies on our gated campus grounds.',
     date: 'Inter-House Sports Tournament',
@@ -87,7 +88,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Multimedia Library & Quiet Reading Commons',
     category: 'classrooms',
     categoryLabel: 'Classrooms & Labs',
-    image: '/src/assets/images/archwood_classroom_tour_1790709947333.jpg',
+    image: images.classroomTour,
     description:
       'Stocked with over 2,000 curriculum titles, phonics audio stations, and cosy breakout pods designed to foster a lifelong love for reading.',
     date: 'Literacy Excellence Center',
@@ -97,7 +98,7 @@ export const GALLERY_ITEMS: GalleryImage[] = [
     title: 'Student Cohort in Crested Royal Purple Uniforms',
     category: 'events',
     categoryLabel: 'Events & Graduation',
-    image: '/src/assets/images/archwood_pupils_glance_1790709958618.jpg',
+    image: images.pupilsGlance,
     description:
       'Confident, happy pupils embodying our motto "I Can Do All Things" in their neat royal purple and gold school uniforms.',
     date: 'Ikota Villa, Lekki Campus',
@@ -192,7 +193,6 @@ export const GallerySection: React.FC = () => {
               <img
                 src={photo.image}
                 alt={photo.title}
-                referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
               />
 
@@ -273,7 +273,6 @@ export const GallerySection: React.FC = () => {
               <img
                 src={filteredPhotos[selectedPhotoIndex].image}
                 alt={filteredPhotos[selectedPhotoIndex].title}
-                referrerPolicy="no-referrer"
                 className="max-w-full max-h-full object-contain"
               />
 

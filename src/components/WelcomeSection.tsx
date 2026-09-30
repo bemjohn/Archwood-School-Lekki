@@ -13,6 +13,7 @@ import {
   Maximize2,
 } from 'lucide-react';
 import { ArchwoodOfficialEmblem } from './CrestLogo';
+import { images } from '@/assets/images';
 
 interface WelcomeSectionProps {
   onOpenVideoTour: () => void;
@@ -80,9 +81,8 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({
               className="relative w-full max-w-[330px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl group border-4 border-white ring-1 ring-black/10 bg-neutral-900 cursor-pointer select-none"
             >
               <img
-                src="/src/assets/images/archwood_vertical_tour_1790712449360.jpg"
+                src={images.verticalTour}
                 alt="Archwood School Lekki 9:16 Vertical Campus Tour Video"
-                referrerPolicy="no-referrer"
                 className={`w-full h-full object-cover transition-transform duration-7000 ease-out ${
                   isPlaying ? 'scale-110' : 'group-hover:scale-105'
                 }`}

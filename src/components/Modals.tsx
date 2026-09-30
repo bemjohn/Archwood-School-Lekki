@@ -16,6 +16,7 @@ import {
   Search,
 } from 'lucide-react';
 import { StoryItem } from '../types';
+import { images } from '@/assets/images';
 
 /* ----------------------------------------------------
    1. Admission Application Modal (₦0.00 Admission Fee)
@@ -605,7 +606,6 @@ export const StoryReaderModal: React.FC<StoryModalProps> = ({ story, onClose }) 
           <img
             src={story.image}
             alt={story.title}
-            referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -677,31 +677,31 @@ export const VideoTourModal: React.FC<VideoTourModalProps> = ({ isOpen, onClose,
     {
       title: 'A Day in the Life: 9:16 Campus Walkthrough Reel',
       desc: 'Follow our pupils through hands-on science activities, phonics reading corners, and lively outdoor play at Plot 17 Road 1 Ikota Villa.',
-      image: '/src/assets/images/archwood_vertical_tour_1790712449360.jpg',
+      image: images.verticalTour,
       isVertical: true,
     },
     {
       title: 'Multimedia Library & Early Literacy Commons',
       desc: 'Stocked with over 2,000 age-appropriate books, interactive phonics listening pods, and comfortable reading nooks for early and primary pupils.',
-      image: '/src/assets/images/archwood_classroom_tour_1790709947333.jpg',
+      image: images.classroomTour,
       isVertical: false,
     },
     {
       title: 'STEAM Robotics & Collaborative Science Lab',
       desc: 'Hands-on discovery zone where pupils build working electronic circuits, program robot rovers, and experiment with real-world scientific inquiry.',
-      image: '/src/assets/images/archwood_hero_stem_1790709923945.jpg',
+      image: images.heroStem,
       isVertical: false,
     },
     {
       title: 'Outdoor Sports Arena, Swimming & Play Area',
       desc: 'Lush green play turf, shaded jungle gyms, swimming facilities, and professional martial arts mats for healthy physical fitness.',
-      image: '/src/assets/images/archwood_hero_sports_1790709936569.jpg',
+      image: images.heroSports,
       isVertical: false,
     },
     {
       title: 'Conducive Air-Conditioned Montessori Rooms',
       desc: 'Child-sized ergonomic furniture, certified Montessori didactic apparatus, and low 1:8 student-to-teacher mentorship.',
-      image: '/src/assets/images/archwood_pupils_glance_1790709958618.jpg',
+      image: images.pupilsGlance,
       isVertical: false,
     },
   ];
@@ -726,7 +726,6 @@ export const VideoTourModal: React.FC<VideoTourModalProps> = ({ isOpen, onClose,
           <img
             src={facilities[activeFacility].image}
             alt={facilities[activeFacility].title}
-            referrerPolicy="no-referrer"
             className={`transition-all duration-500 ${
               facilities[activeFacility].isVertical
                 ? 'h-full max-w-[270px] aspect-[9/16] object-cover rounded-2xl shadow-2xl border-2 border-white/20'

@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, BookOpen, Clock, Calendar, ArrowUpRight } fr
 import { STORIES } from '../data/mockData';
 import { StoryItem } from '../types';
 import { ArchwoodOfficialEmblem } from './CrestLogo';
+import { images } from '@/assets/images';
 
 interface ArchwoodStoriesProps {
   onSelectStory: (story: StoryItem) => void;
@@ -22,7 +23,7 @@ export const ArchwoodStories: React.FC<ArchwoodStoriesProps> = ({ onSelectStory 
       fullText: 'Join us at the Archwood Lekki grounds for our flagship annual sports festival featuring track events, tug of war, martial arts exhibitions, and traditional dance displays.',
       date: 'November 14, 2026',
       readTime: '9:00 AM – 3:00 PM',
-      image: '/src/assets/images/archwood_hero_sports_1790709936569.jpg',
+      image: images.heroSports,
     },
     {
       id: 'event-2',
@@ -33,7 +34,7 @@ export const ArchwoodStories: React.FC<ArchwoodStoriesProps> = ({ onSelectStory 
       fullText: 'An inspiring showcase displaying our pupils analytical competencies developed in the Archwood STEAM lab. Open to prospective parents and partners.',
       date: 'December 4, 2026',
       readTime: '10:00 AM',
-      image: '/src/assets/images/archwood_hero_stem_1790709923945.jpg',
+      image: images.heroStem,
     },
     {
       id: 'event-3',
@@ -44,7 +45,7 @@ export const ArchwoodStories: React.FC<ArchwoodStoriesProps> = ({ onSelectStory 
       fullText: 'Facilitated by our certified British EYFS specialists to help parents support developmental reading milestones.',
       date: 'October 22, 2026',
       readTime: '11:00 AM',
-      image: '/src/assets/images/archwood_classroom_tour_1790709947333.jpg',
+      image: images.classroomTour,
     },
   ];
 
@@ -58,7 +59,7 @@ export const ArchwoodStories: React.FC<ArchwoodStoriesProps> = ({ onSelectStory 
       fullText: 'Our Nursery 2 learners had an exciting practical life session yesterday! Developing sensory vocabulary, kitchen etiquette, and healthy habits.',
       date: '3 days ago',
       readTime: 'Instagram @archwoodschoollekki',
-      image: '/src/assets/images/archwood_classroom_tour_1790709947333.jpg',
+      image: images.classroomTour,
     },
     {
       id: 'social-2',
@@ -69,7 +70,7 @@ export const ArchwoodStories: React.FC<ArchwoodStoriesProps> = ({ onSelectStory 
       fullText: 'Swimming builds aerobic stamina and mental focus. Our certified coaches provide individualized stroke correction in small pods.',
       date: '1 week ago',
       readTime: 'Facebook / YouTube',
-      image: '/src/assets/images/archwood_hero_sports_1790709936569.jpg',
+      image: images.heroSports,
     },
   ];
 
@@ -159,7 +160,6 @@ export const ArchwoodStories: React.FC<ArchwoodStoriesProps> = ({ onSelectStory 
               <img
                 src={story.image}
                 alt={story.title}
-                referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Dark Gradient Overlay for high legibility */}

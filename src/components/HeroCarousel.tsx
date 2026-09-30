@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown, ArrowRight, Sparkles, Award } from 'lucide-react';
+import { images } from '@/assets/images';
 
 interface HeroCarouselProps {
   onOpenApply: () => void;
@@ -10,7 +11,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onOpenApply, onOpenI
   const slides = [
     {
       id: 1,
-      image: '/src/assets/images/archwood_hero_stem_1790709923945.jpg',
+      image: images.heroStem,
       headline: 'Excellence in academics',
       kicker: 'ARCHWOOD SCHOOL LEKKI',
       linkText: 'LEARN ABOUT OUR APPROACH',
@@ -19,7 +20,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onOpenApply, onOpenI
     },
     {
       id: 2,
-      image: '/src/assets/images/archwood_hero_sports_1790709936569.jpg',
+      image: images.heroSports,
       headline: 'Wearing royal and going for gold',
       kicker: 'PHYSICAL AGILITY & CHARACTER',
       linkText: 'DISCOVER OUR ATHLETIC & CLUBS PROGRAMMES',
@@ -28,7 +29,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onOpenApply, onOpenI
     },
     {
       id: 3,
-      image: '/src/assets/images/archwood_classroom_tour_1790709947333.jpg',
+      image: images.classroomTour,
       headline: 'Nurturing tomorrow’s leaders',
       kicker: 'BRITISH EYFS & NIGERIAN BLEND',
       linkText: 'APPLY FOR 2026/2027 ADMISSION',
@@ -63,7 +64,6 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onOpenApply, onOpenI
           <img
             src={slide.image}
             alt={slide.headline}
-            referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center transform scale-100 transition-transform duration-7000 ease-out"
           />
           {/* Gradients matching screenshot: deep dark vignette at top and bottom */}

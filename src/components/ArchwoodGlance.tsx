@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { images } from '@/assets/images';
 
 interface ArchwoodGlanceProps {
   onOpenApply: () => void;
@@ -33,9 +34,8 @@ export const ArchwoodGlance: React.FC<ArchwoodGlanceProps> = ({ onOpenApply, onO
         {/* Left Side: Photo of Pupils */}
         <div className="lg:col-span-5 relative min-h-[400px] lg:min-h-full">
           <img
-            src="/src/assets/images/archwood_pupils_glance_1790709958618.jpg"
+            src={images.pupilsGlance}
             alt="Archwood School Lekki Pupils in School Uniform"
-            referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#350C3B]/80 via-transparent to-transparent lg:hidden" />
