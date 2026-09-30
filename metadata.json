@@ -1,0 +1,6 @@
+{
+  "name": "Archwood School Lekki",
+  "description": "Official website for Archwood School Lekki, providing world-class nursery and primary education in Ikota Villa, Lekki, Lagos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
